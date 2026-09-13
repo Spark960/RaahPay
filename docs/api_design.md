@@ -1,4 +1,4 @@
-# FlowLend — API Design Specification
+# RaahPay — API Design Specification
 
 > Complete endpoint reference for the FastAPI backend.  
 > Base URL: `http://localhost:8000/api/v1`  
@@ -290,7 +290,7 @@ Current dynamic repayment schedule with history of adjustments.
 ```
 
 ### `GET /loans/{loan_id}/schedule/comparison`
-Side-by-side Traditional EMI vs Dynamic FlowLend schedule.
+Side-by-side Traditional EMI vs Dynamic RaahPay schedule.
 
 **Response** `200 OK`:
 ```json
@@ -307,7 +307,7 @@ Side-by-side Traditional EMI vs Dynamic FlowLend schedule.
       "penalty_fees": 26.48,
       "effective_cost": 556.04
     },
-    "dynamic_flowlend": {
+    "dynamic_raahpay": {
       "payments": [72.40, 105.80, 48.50, 52.10, 95.20, 110.50, 38.90],
       "total_paid": 523.40,
       "total_interest": 23.40,
@@ -321,7 +321,7 @@ Side-by-side Traditional EMI vs Dynamic FlowLend schedule.
       "savings_for_borrower": 32.64,
       "defaults_prevented": 2,
       "tenure_extension_months": 1,
-      "summary": "FlowLend prevented 2 defaults and saved the borrower $32.64 in penalties, at the cost of 1 extra month of tenure."
+      "summary": "RaahPay prevented 2 defaults and saved the borrower $32.64 in penalties, at the cost of 1 extra month of tenure."
     }
   }
 }

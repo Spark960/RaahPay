@@ -1,4 +1,4 @@
-# FlowLend — Algorithm Deep Dive
+# RaahPay — Algorithm Deep Dive
 
 > Mathematical foundations and algorithmic approaches for each module in the analytics pipeline.
 
@@ -202,7 +202,7 @@ Where $\sigma(x) = \frac{1}{1 + e^{-x}}$ and $\sum w_i = 1.0$.
 Traditional EMI:
 $$EMI = \frac{L \cdot r \cdot (1+r)^n}{(1+r)^n - 1}$$
 
-**FlowLend Dynamic Installment**:
+**RaahPay Dynamic Installment**:
 $$p_t = \text{clip}\!\left(\alpha \cdot \text{NetInflow}_t \cdot S_t,\ I_{\min},\ I_{\max}\right)$$
 
 Where:
@@ -357,7 +357,7 @@ $$P(r_t \mid \mathbf{x}_{1:t}) \propto P(\mathbf{x}_t \mid r_{t-1}, \mathbf{x}^{
 
 When $P(r_t = 0) > 0.50$ → changepoint detected → reset forecasting window.
 
-### Application in FlowLend
+### Application in RaahPay
 
 ```mermaid
 flowchart LR

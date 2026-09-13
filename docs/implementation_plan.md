@@ -1,13 +1,13 @@
-# FlowLend — Dynamic Microloan Repayment & Cash-Flow Planning
+# RaahPay — Dynamic Microloan Repayment & Cash-Flow Planning
 
 > **Hackathon Theme**: SDG 8 — Decent Work and Economic Growth  
-> **Core Insight**: Fixed repayment schedules break borrowers with irregular income. FlowLend dynamically adapts repayments to real cash-flow patterns, preventing unnecessary defaults while ensuring sustainable loan recovery.
+> **Core Insight**: Fixed repayment schedules break borrowers with irregular income. RaahPay dynamically adapts repayments to real cash-flow patterns, preventing unnecessary defaults while ensuring sustainable loan recovery.
 
 ## Problem Summary
 
 Microfinance borrowers — street vendors, seasonal farmers, gig workers — earn income on wildly irregular schedules. A fixed \$150/month EMI works fine in peak months but triggers cascading defaults during lean periods, even when the borrower is fundamentally creditworthy. The result: punitive late fees, credit score damage, and borrowers turning to predatory loan sharks — all from a scheduling problem, not a solvency problem.
 
-**FlowLend solves this** by building an intelligent system that:
+**RaahPay solves this** by building an intelligent system that:
 1. **Decomposes** borrower cash flow into trend, seasonal, and shock components
 2. **Forecasts** future cash availability with confidence intervals
 3. **Dynamically schedules** repayments that flex with income (higher in peaks, lower in troughs)
@@ -142,7 +142,7 @@ Portfolio overview for lenders:
 Deep-dive on individual borrower:
 - Cash flow chart (observed + decomposed trend/seasonal)
 - Dynamic repayment schedule visualization
-- Side-by-side: "Traditional EMI" vs "FlowLend Dynamic" comparison
+- Side-by-side: "Traditional EMI" vs "RaahPay Dynamic" comparison
 - Risk explanation card with SHAP waterfall
 
 #### [NEW] `frontend/src/components/CashFlowChart.tsx`
@@ -154,7 +154,7 @@ Recharts area chart with gradient fills showing:
 #### [NEW] `frontend/src/components/StressTestSlider.tsx`
 Interactive slider: "Simulate -X% revenue shock for N days"
 - Real-time API call to recompute dynamic schedule
-- Animated transition showing how FlowLend adapts vs fixed EMI defaults
+- Animated transition showing how RaahPay adapts vs fixed EMI defaults
 
 #### [NEW] `frontend/src/components/RiskExplanationCard.tsx`
 SHAP-powered explanation panel:

@@ -1,4 +1,4 @@
-# FlowLend — Data Strategy & Synthetic Generation
+# RaahPay — Data Strategy & Synthetic Generation
 
 > How we create realistic, demo-ready financial data for 3 distinct borrower personas.
 

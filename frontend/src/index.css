@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-slate-50 text-ink font-body antialiased min-h-screen relative overflow-x-hidden;
+  }
+  
+  /* Soft pulsing orbs */
+  body::before {
+    content: "";
+    @apply fixed inset-0 -z-20 pointer-events-none;
+    background-image:
+      radial-gradient(ellipse 60% 50% at 20% 10%, rgba(79,70,229,0.15), transparent),
+      radial-gradient(ellipse 50% 50% at 80% 90%, rgba(245,158,11,0.12), transparent),
+      radial-gradient(ellipse 40% 40% at 50% 50%, rgba(56,189,248,0.08), transparent);
+    animation: pulse-orbs 8s ease-in-out infinite alternate;
+  }
+
+  /* Modern Animated Grid */
+  body::after {
+    content: "";
+    @apply fixed inset-0 -z-10 pointer-events-none opacity-50;
+    /* Clean 64px Cartesian grid */
+    background-image:
+      linear-gradient(to right, #CBD5E1 1px, transparent 1px),
+      linear-gradient(to bottom, #CBD5E1 1px, transparent 1px);
+    background-size: 64px 64px;
+    /* Fade out softly at all edges to create a central focus */
+    mask-image: radial-gradient(ellipse 100% 100% at 50% 50%, black 40%, transparent 90%);
+    -webkit-mask-image: radial-gradient(ellipse 100% 100% at 50% 50%, black 40%, transparent 90%);
+    /* 4s diagonal pan = distinctly visible but smooth movement */
+    animation: grid-pan 4s linear infinite;
+  }
+  
+  @keyframes grid-pan {
+    0% { background-position: 0px 0px; }
+    100% { background-position: 64px 64px; }
+  }
+
+  @keyframes pulse-orbs {
+    0% { opacity: 0.6; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+}
+
+@layer components {
+  /* Premium frosted glass cards to refract the moving grid */
+  .card {
+    @apply bg-white/70 rounded-2xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] backdrop-blur-xl transition-all duration-300;
+  }
+  .card-glass {
+    @apply bg-white/50 rounded-2xl border border-white/80 shadow-[0_8px_30px_rgb(0,0,0,0.06)] backdrop-blur-2xl transition-all duration-300;
+    background: linear-gradient(135deg, rgba(255,255,255,0.7) 0%, rgba(248,250,252,0.5) 100%);
+  }
+
+  /* Risk badges — light mode friendly */
+  .badge-low      { @apply bg-emerald-50 text-emerald-700 border border-emerald-200; }
+  .badge-moderate { @apply bg-amber-50   text-amber-700   border border-amber-200; }
+  .badge-high     { @apply bg-orange-50  text-orange-700  border border-orange-200; }
+  .badge-critical { @apply bg-red-50     text-red-700     border border-red-200; }
+
+  /* Stat pill */
+  .stat-pill {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-primary-50 text-primary-700 border border-primary-100;
+  }
+
+  /* Glows */
+  .glow-indigo { box-shadow: 0 0 28px rgba(99,102,241,0.18); }
+  .glow-amber  { box-shadow: 0 0 20px rgba(245,158,11,0.18); }
+}
+
+/* Recharts — light mode tooltips */
+.recharts-tooltip-wrapper { @apply !outline-none; }
+.recharts-default-tooltip {
+  @apply !bg-white !border-border !rounded-xl !shadow-xl;
+  color: #0F172A !important;
+}

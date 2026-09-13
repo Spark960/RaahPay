@@ -1,4 +1,4 @@
-# FlowLend — Demo Playbook & Pitch Strategy
+# RaahPay — Demo Playbook & Pitch Strategy
 
 > A scripted guide for delivering a winning hackathon demo.
 
@@ -44,7 +44,7 @@ Switch to the **Repayment Comparison** chart:
 
 Navigate to **Borrower Detail → Cash Flow** tab.
 
-> *"FlowLend starts by understanding Kofi's real financial rhythm. We decompose his transaction history using STL seasonal analysis. See the blue trend line? His business is actually growing. The orange wave? That's his seasonal pattern — peak in October-December, trough in February-April. The gray noise? Random daily variation that doesn't matter."*
+> *"RaahPay starts by understanding Kofi's real financial rhythm. We decompose his transaction history using STL seasonal analysis. See the blue trend line? His business is actually growing. The orange wave? That's his seasonal pattern — peak in October-December, trough in February-April. The gray noise? Random daily variation that doesn't matter."*
 
 **On screen**: STL decomposition chart — trend, seasonal, residual layers.
 
@@ -62,11 +62,11 @@ Click on **Risk Score** tab.
 
 Navigate to **Loan → Schedule Comparison**.
 
-> *"Here's where FlowLend shines. The flat red line is the traditional \$88/month EMI. The green curve is FlowLend's dynamic schedule. Watch what happens:"*
+> *"Here's where RaahPay shines. The flat red line is the traditional \$88/month EMI. The green curve is RaahPay's dynamic schedule. Watch what happens:"*
 
 Point to each month:
-- **Month 1** (Oct, harvest): *"\$105 payment — Kofi has surplus, so FlowLend collects more"*
-- **Month 3** (Feb, lean): *"\$48 payment — income is down, FlowLend automatically reduces to a comfortable level"*
+- **Month 1** (Oct, harvest): *"\$105 payment — Kofi has surplus, so RaahPay collects more"*
+- **Month 3** (Feb, lean): *"\$48 payment — income is down, RaahPay automatically reduces to a comfortable level"*
 - **Month 4** (Mar, lean): *"\$52 — still low, still affordable"*
 - **Month 6** (Oct, next harvest): *"\$110 — catching up during the surplus"*
 
@@ -82,7 +82,7 @@ Click on **Stress Test Simulator**.
 
 **Drag the slider live.** Watch the chart animate in real-time.
 
-> *"Instantly, FlowLend detects the stress through our CUSUM early warning system. The next payment drops to \$44 — the interest-only floor. Kofi doesn't default. The loan extends by one month. And as soon as income recovers, the schedule automatically accelerates to catch up."*
+> *"Instantly, RaahPay detects the stress through our CUSUM early warning system. The next payment drops to \$44 — the interest-only floor. Kofi doesn't default. The loan extends by one month. And as soon as income recovers, the schedule automatically accelerates to catch up."*
 
 > *"Meanwhile, the traditional loan? The borrower misses the payment. Gets a penalty. And if they miss the next one too, they're in default spiral."*
 
@@ -92,7 +92,7 @@ Click on **Stress Test Simulator**.
 
 ### 3:45–4:30 — Technical Deep Dive
 
-> *"Under the hood, FlowLend runs a 7-module analytics pipeline:"*
+> *"Under the hood, RaahPay runs a 7-module analytics pipeline:"*
 
 Show the **architecture diagram** briefly:
 
@@ -109,11 +109,11 @@ Show the **architecture diagram** briefly:
 
 ### 4:30–5:00 — Impact & Close
 
-> *"FlowLend aligns with SDG 8 — Decent Work and Economic Growth. By adapting repayments to real cash flow:"*
+> *"RaahPay aligns with SDG 8 — Decent Work and Economic Growth. By adapting repayments to real cash flow:"*
 
 Show the **impact metrics card**:
 
-| Metric | Traditional | FlowLend | Improvement |
+| Metric | Traditional | RaahPay | Improvement |
 |:-------|:-----------|:---------|:------------|
 | Defaults prevented | 0 | 2 per borrower | ♾️ |
 | Penalty fees | \$26.48 | \$0 | -100% |
@@ -123,7 +123,7 @@ Show the **impact metrics card**:
 
 > *"It's a win-win. Borrowers stay solvent. Lenders recover more. And microfinance actually does what it's supposed to do — lift people out of poverty, not push them deeper in."*
 
-**Final line**: *"FlowLend: Because repayment should flex with life, not fight against it."*
+**Final line**: *"RaahPay: Because repayment should flex with life, not fight against it."*
 
 ---
 
@@ -137,7 +137,7 @@ Show the **impact metrics card**:
 | *"Doesn't this just shift risk to the lender?"* | No — the lender actually recovers *more*. Our data shows 99% recovery rate vs 89% for fixed EMI. The small interest cost of 1 extra month is far less than the cost of a default (collection costs, write-offs, legal). |
 | *"How do you prevent moral hazard — borrowers gaming the system?"* | Three safeguards: (1) The sweep percentage is applied to *verified* inflows, not self-reported. (2) The payment floor ensures minimum debt service. (3) The CUSUM system distinguishes genuine distress from behavioral changes. |
 | *"What data do you need?"* | Just a daily transaction log — inflows and outflows. This is available from mobile money platforms, bank statements, or POS systems. No credit bureau data needed. |
-| *"How is this different from revenue-based financing?"* | Revenue-based financing (like Stripe Capital) sweeps a fixed % of *every* transaction. FlowLend is smarter: it considers seasonality, forecasts, and affordability. A revenue share would over-extract during peak season and under-extract during lean. FlowLend optimizes the schedule holistically. |
+| *"How is this different from revenue-based financing?"* | Revenue-based financing (like Stripe Capital) sweeps a fixed % of *every* transaction. RaahPay is smarter: it considers seasonality, forecasts, and affordability. A revenue share would over-extract during peak season and under-extract during lean. RaahPay optimizes the schedule holistically. |
 | *"What about regulatory compliance?"* | Our SHAP explanations generate compliant adverse action reason codes. Every decision is traceable and auditable. We don't use protected attributes. |
 | *"Is this real data?"* | Synthetic, but economically calibrated. The seasonal patterns, shock probabilities, and expense structures are based on published microfinance research (Field et al. 2013, Beaman et al. 2014). |
 

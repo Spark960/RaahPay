@@ -1,4 +1,4 @@
-# FlowLend — System Architecture
+# RaahPay — System Architecture
 
 > Complete technical architecture for the Dynamic Microloan Repayment & Cash-Flow Planning system.
 

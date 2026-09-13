@@ -1,4 +1,4 @@
-# FlowLend — Frontend UI/UX Design
+# RaahPay — Frontend UI/UX Design
 
 > Design system, wireframes, and component specifications for the lender dashboard.
 
@@ -6,7 +6,7 @@
 
 ## Design Philosophy
 
-FlowLend's UI should feel like a **modern fintech analytics platform** — clean, data-dense, but not overwhelming. The target user is a **microfinance loan officer** who needs to:
+RaahPay's UI should feel like a **modern fintech analytics platform** — clean, data-dense, but not overwhelming. The target user is a **microfinance loan officer** who needs to:
 1. Quickly assess portfolio health at a glance
 2. Deep-dive into individual borrower cash flow patterns
 3. Understand and trust AI-generated recommendations
@@ -59,7 +59,7 @@ FlowLend's UI should feel like a **modern fintech analytics platform** — clean
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│  🏦 FlowLend          [Dashboard] [Simulator]    🔔 👤  │
+│  🏦 RaahPay          [Dashboard] [Simulator]    🔔 👤  │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
 │  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐   │
@@ -233,7 +233,7 @@ Payment ($)
 
 **Critical Design Elements**:
 - **Red shaded zones**: Where income drops below fixed EMI → default territory
-- **Green dynamic line**: The FlowLend adaptive schedule
+- **Green dynamic line**: The RaahPay adaptive schedule
 - **Dashed red line**: Fixed EMI reference
 - **Gray area**: Monthly income/cash flow background
 - **Annotations**: Labels on key months ("Lean season", "Harvest peak", "Catch-up")
@@ -263,7 +263,7 @@ Payment ($)
 │  └────────────────────────────────────────────────┘  │
 │                                                      │
 │  ┌──────────────┐ ┌──────────────┐                   │
-│  │ Fixed EMI    │ │ FlowLend     │                   │
+│  │ Fixed EMI    │ │ RaahPay     │                   │
 │  │ ❌ 2 defaults│ │ ✅ 0 defaults │                   │
 │  │ $26 penalty  │ │ $0 penalty   │                   │
 │  └──────────────┘ └──────────────┘                   │
