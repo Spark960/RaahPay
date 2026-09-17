@@ -8,13 +8,13 @@
 
 ```mermaid
 flowchart TB
-    subgraph DataLayer["🗄️ Data Layer"]
+    subgraph DataLayer ["🗄️ Data Layer"]
         SIM["Synthetic Data Generator<br/>3 Personas × 12mo history"]
         DB[("SQLite Database<br/>SQLModel ORM")]
         SIM --> DB
     end
 
-    subgraph AnalyticsEngine["🧠 Analytics Engine (Python)"]
+    subgraph AnalyticsEngine ["🧠 Analytics Engine (Python)"]
         direction TB
         FE["Feature Extraction<br/>Cash Flow Metrics"]
         STL["STL Decomposition<br/>Trend / Seasonal / Residual"]
@@ -34,7 +34,7 @@ flowchart TB
         EWS -.->|"Stress Alert"| SCHED
     end
 
-    subgraph API["⚡ FastAPI Backend"]
+    subgraph API ["⚡ FastAPI Backend"]
         direction TB
         EP_B["/borrowers"]
         EP_CF["/cashflow"]
@@ -43,7 +43,7 @@ flowchart TB
         EP_S["/simulate"]
     end
 
-    subgraph Frontend["🖥️ React + Vite Dashboard"]
+    subgraph Frontend ["🖥️ React + Vite Dashboard"]
         direction TB
         DASH["Portfolio Dashboard"]
         DETAIL["Borrower Detail View"]
@@ -186,18 +186,18 @@ flowchart LR
         TX["Raw Transactions<br/>date, amount, category"]
     end
     
-    subgraph Tier1["Tier 1: Foundation"]
+    subgraph Tier1 ["Tier 1: Foundation"]
         M1["①  STL Decomposition<br/>Trend + Seasonal + Residual"]
         M2["②  Cash Flow Forecast<br/>P10 / P50 / P90 bands"]
     end
     
-    subgraph Tier2["Tier 2: Intelligence"]
+    subgraph Tier2 ["Tier 2: Intelligence"]
         M3["③  Affordability Score<br/>DAS ∈ [0, 100]"]
         M4["④  Risk Scorer<br/>LightGBM + SHAP"]
         M5["⑤  Early Warning<br/>CUSUM Detector"]
     end
     
-    subgraph Tier3["Tier 3: Advanced"]
+    subgraph Tier3 ["Tier 3: Advanced"]
         M6["⑥  Financial State HMM<br/>5-state latent model"]
         M7["⑦  Change Point Detection<br/>BOCPD / PELT"]
     end
@@ -373,14 +373,14 @@ frontend/
 
 ```mermaid
 flowchart LR
-    subgraph LocalMachine["💻 Local Machine"]
-        subgraph BackendProcess["Backend (Port 8000)"]
+    subgraph LocalMachine ["💻 Local Machine"]
+        subgraph BackendProcess ["Backend (Port 8000)"]
             UVICORN["uvicorn app.main:app"]
             SQLITE[("demo.db")]
             UVICORN <--> SQLITE
         end
         
-        subgraph FrontendProcess["Frontend (Port 5173)"]
+        subgraph FrontendProcess ["Frontend (Port 5173)"]
             VITE["vite dev server"]
         end
         
